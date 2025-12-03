@@ -1,0 +1,127 @@
+:root{
+      --sidebar-w:216px;
+      --container-w:1080px;
+      --row-max:864px;
+      --blue:#4373CD;
+      --light:#ADC8FA;
+      --gap:30px;
+      --topbar-h:70px;
+    }
+    *{
+        box-sizing:border-box;
+        margin:0;
+        padding:0
+    }
+    html,body{
+        height:100%;
+        font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial
+    }
+
+  
+    .app{
+      max-width:var(--container-w);
+      margin:0 auto;
+      min-height:100vh;
+      display:flex;
+      align-items:stretch;
+    }
+
+   
+    .sidebar{
+      width:var(--sidebar-w);
+      background:var(--blue);
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      position:sticky;
+      top:0;
+      height:100vh;   
+      z-index:20;
+    }
+    .brand{
+      height:var(--topbar-h);
+      padding:20px;
+      display:flex;
+      align-items:center;
+    }
+    .sidebar nav ul{
+        list-style:none;
+        padding-left:20px
+    }
+    .sidebar nav li{
+        margin-top:10px;
+        font-weight:500
+    }
+
+  
+    .main{
+        flex:1;
+        min-height:100%
+    }
+
+ 
+    .topbar{
+      height:var(--topbar-h);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:20px;
+      background:var(--light);
+      position:sticky;
+      top:0;            
+      z-index:15;
+    }
+    .rect{
+        height:20px;
+        width:60px;
+        background:var(--blue)
+    }
+
+    .dot{
+        width:30px;
+        height:30px;
+        border-radius:50%;
+        background:var(--blue)
+    }
+
+ 
+    .content{
+      display:flex;
+      flex-direction:column;
+      padding:30px;
+      gap:var(--gap);
+      align-items:center; 
+    }
+    .row{
+      display:flex;
+      justify-content:space-between;
+      width:100%;
+      max-width:var(--row-max);
+    }
+
+    .card{
+      background:var(--light);
+      border-radius:8px;
+      height:200px;
+    }
+    .w-248{width:248px}
+    .w-525{width:525px}
+    .w-382{width:382px}
+
+    .stack{
+      width:100%;
+      max-width:var(--row-max);
+      background:var(--light);
+      border-radius:8px;
+      height:300px;
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .stack .bar{
+      height:50px;
+      background:var(--blue);
+      border-radius:8px;
+      width:100%;
+    }
